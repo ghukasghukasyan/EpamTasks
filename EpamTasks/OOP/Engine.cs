@@ -11,6 +11,11 @@ namespace EpamTasks
         public string Type { get; set; }
         public string SerialNumber { get; set; }
 
+        public Engine()
+        {
+           
+        }
+
         public Engine(int power, int volume, string type, string serialNumber)
         {
             Power = power;
@@ -19,10 +24,6 @@ namespace EpamTasks
             SerialNumber = serialNumber;
         }
 
-        public Engine()
-        {
-           
-        }
 
     }
 }

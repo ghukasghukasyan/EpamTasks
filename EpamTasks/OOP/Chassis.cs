@@ -10,6 +10,11 @@ namespace EpamTasks
         public int Number { get; set; }
         public int PermissibleLoad { get; set; }
 
+        public Chassis()
+        {
+
+        }
+
         public Chassis(int wheelsNumber, int number, int permissibleLoad)
         {
             WheelsNumber = wheelsNumber;
@@ -17,10 +22,6 @@ namespace EpamTasks
             PermissibleLoad = permissibleLoad;
         }
 
-        public Chassis()
-        {
-
-        }
 
 
     }

@@ -10,7 +10,7 @@ namespace EpamTasks
 
         public static void Converters()
         {
-            Console.WriteLine("Insert an integer for converting");
+            Console.WriteLine ("Insert an integer for converting");
             int num = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Insert a base number 2-20");
             int system = Convert.ToInt32(Console.ReadLine());

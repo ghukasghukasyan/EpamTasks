@@ -6,15 +6,16 @@ namespace EpamTasks.OOP
 {
     class Truck:BaseCar
     {
+        public Truck()
+        {
+
+        }
+
         public Truck(Engine engine, Transmission transmission, Chassis chassis) : base(engine, transmission, chassis)
         {
 
         }
 
-        public Truck()
-        {
-
-        }
         
        
     }

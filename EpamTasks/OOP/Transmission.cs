@@ -10,6 +10,11 @@ namespace EpamTasks
         public int NumberOfGears { get; set; }
         public string Manufacturer { get; set; }
 
+        public Transmission()
+        {
+
+        }
+
         public Transmission(string type, int numberOfGears, string manufacturer)
         {
             Type = type;
@@ -17,10 +22,6 @@ namespace EpamTasks
             Manufacturer = manufacturer;
         }
 
-        public Transmission()
-        {
-
-        }
 
     }
 

@@ -6,14 +6,15 @@ namespace EpamTasks.OOP
 {
     class Scooter : BaseCar
     {
+        public Scooter()
+        {
+
+        }
+
         public Scooter(Engine engine, Transmission transmission, Chassis chassis) : base(engine, transmission, chassis)
         {
 
         }
 
-        public Scooter()
-        {
-
-        }
     }
 }

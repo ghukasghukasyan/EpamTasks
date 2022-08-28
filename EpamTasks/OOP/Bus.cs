@@ -11,9 +11,9 @@ namespace EpamTasks.OOP
 
         }
 
-        public Bus(Engine engine, Transmission transmission, Chassis chassis) : base(engine,transmission,chassis)
+        public Bus(Engine engine, Transmission transmission, Chassis chassis) : base(engine, transmission, chassis)
         {
-           
+
         }
     }
 }

@@ -6,19 +6,24 @@ namespace EpamTasks.Interface_and_Abstract_Class
 {
     class Airplane : IFlyable
     {
-        public void FlyTo()
-        {
-            throw new NotImplementedException();
-        }
         
-
-        public void GetFlyTime()
+        int initialSpeed = 200;
+        Cordinates currentPosition { get; set; }
+        
+        public void FlyTo(Cordinates newPosition)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The distance between this to points is");
+            var distance = Math.Sqrt(Math.Pow((newPosition.X - currentPosition.X), 2) + Math.Pow((newPosition.Y - currentPosition.Y), 2) + Math.Pow((newPosition.Z - currentPosition.Z), 2));
+
+
         }
 
-        Cordinates CurrentPosition { get; set; }
-        int initialSpeed = 200;
+
+        public void GetFlyTime(Cordinates newPosition)
+        {
+            
+        }
+
        
 
     }

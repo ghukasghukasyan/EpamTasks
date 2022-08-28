@@ -6,7 +6,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
 {
     interface IFlyable
     {
-         void FlyTo();
-         void GetFlyTime();
+         void FlyTo(Cordinates newPoint);
+         void GetFlyTime(Cordinates newPoint);
     }
 }
