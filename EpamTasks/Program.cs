@@ -57,15 +57,29 @@ namespace EpamTasks
             //Console.WriteLine(scooter.ToString()+"\n");
             #endregion
 
-            Cordinates newPosition = new Cordinates(10,100,100);
+
+
+
+            //Bird bird = new Bird(new Cordinates(-10, 20, 30));
+            //Console.WriteLine(bird.ToString());
+            //bird.FlyTo(new Cordinates(-20, 30, 40));
+            ////bird.GetFlyTime(new Cordinates(20, 30, 40));
+            Console.WriteLine("Insert X ");
+            Cordinates corf = new Cordinates(-10, -20, -30);
             
-            Bird bird = new Bird();
-            bird.FlyTo(newPosition);
 
 
 
-            var distance = Math.Sqrt(Math.Pow((8 - 4), 2) + Math.Pow((8-4), 2) + Math.Pow((8-4), 2));
-            Console.WriteLine(distance);
+
+
+
+
+
+
+
+
+
+
 
 
 

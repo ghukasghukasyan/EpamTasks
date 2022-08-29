@@ -6,27 +6,45 @@ namespace EpamTasks.Interface_and_Abstract_Class
 {
     class Bird : IFlyable
     {
-        public int speed = 10;
-        Cordinates currentPosition = new Cordinates(10, 10, 10);
+        private int speed = 10;
+        public Cordinates CurrentPosition;
+        
         
         public void FlyTo(Cordinates newPosition)
         {
            
-            Console.WriteLine(" The distance between this two points is ");
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - currentPosition.X), 2) + Math.Pow((newPosition.Y - currentPosition.Y), 2) + Math.Pow((newPosition.Z - currentPosition.Z), 2));
-            Console.WriteLine(distance);
+            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            Console.WriteLine("The distance between this two points is : " +distance);
+            
 
         }
 
         public void GetFlyTime(Cordinates newPosition)
         {
-            
+            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            Console.WriteLine("The distance between this two points is : " + distance);
+            var flyTime = distance / speed;
+            Console.WriteLine("The fly time is : " +flyTime);
+           
+        }
+
+        public Bird()
+        {
+
+        }
+
+        public Bird(Cordinates currentPosition)
+        {
+            CurrentPosition = currentPosition;
+        }
+
+        public override string ToString()
+        {
+            return $"Bird Cordinates are X = {CurrentPosition.X} Y = {CurrentPosition.Y} Z = {CurrentPosition.Z}";
         }
 
 
-        
 
-       
-        
+
     }
 }

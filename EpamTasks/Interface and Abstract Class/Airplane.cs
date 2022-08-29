@@ -9,6 +9,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
         
         int initialSpeed = 200;
         Cordinates currentPosition { get; set; }
+
         
         public void FlyTo(Cordinates newPosition)
         {

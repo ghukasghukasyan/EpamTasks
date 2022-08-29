@@ -7,29 +7,31 @@ namespace EpamTasks.Interface_and_Abstract_Class
     public class Cordinates
     {
 
-        private int x { get; set; }
-        private int y { get; set; }
-        private int z { get; set; }
+        private int _x;
+        private int _y;
+        private int _z;
 
         public int X
         {
-            get => x;
+            get { return _x; }
             set
             {
                 if (value < 0)
-                { 
-                    Console.WriteLine("Insert an positive number for X cordinate"); 
+                {
+                    Console.WriteLine("Insert an positive number for X cordinate");
+
                 }
                 else
                 {
-                    value = x;
+                    this._x= value;
                 }
-                            }
+
+            }
         }
 
         public int Y
         {
-            get => y;
+            get { return _y; }
             set
             {
                 if (value < 0)
@@ -38,14 +40,14 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 }
                 else
                 {
-                    value = y;
+                    this._y = value;
                 }
             }
         }
-        
+
         public int Z
         {
-            get => z;
+            get { return _z; }
             set
             {
                 if (value < 0)
@@ -54,26 +56,27 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 }
                 else
                 {
-                    value = z;
+                    this._z = value;
                 }
             }
         }
-        
+
         public Cordinates()
         {
-
+        
         }
 
-        public Cordinates(int x,int y,int z)
+        public Cordinates(int x, int y, int z)
         {
             X = x;
             Y = y;
             Z = z;
-           
-           
+        }
+        public override string ToString()
+        {
+            return $"X={_x} Y={_y} Z={_z}";
         }
 
 
-       
     }
 }
