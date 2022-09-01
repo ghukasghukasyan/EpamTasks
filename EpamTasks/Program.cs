@@ -57,16 +57,27 @@ namespace EpamTasks
             //Console.WriteLine(scooter.ToString()+"\n");
             #endregion
 
+            #region Interface and Abstract Class
+
+            Console.WriteLine("Insert positive number for X cordinate ");
+            int xCord = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Insert positive number for Y cordinate ");
+            int yCord = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Insert positive number for Z cordinate ");
+            int zCord = Convert.ToInt32(Console.ReadLine());
 
 
-
-            //Bird bird = new Bird(new Cordinates(-10, 20, 30));
+            //Bird bird = new Bird(new Cordinates(xCord, yCord,zCord));
             //Console.WriteLine(bird.ToString());
-            //bird.FlyTo(new Cordinates(-20, 30, 40));
-            ////bird.GetFlyTime(new Cordinates(20, 30, 40));
-            Console.WriteLine("Insert X ");
-            Cordinates corf = new Cordinates(-10, -20, -30);
-            
+            //bird.FlyTo(new Cordinates(10, 30, 40));
+            //bird.GetFlyTime(new Cordinates(10, 30, 40));
+
+            Airplane airplane = new Airplane(new Cordinates(xCord, yCord, zCord));
+            Console.WriteLine(airplane.ToString());
+            airplane.FlyTo(new Cordinates(100, 100, 100));
+            airplane.GetFlyTime(new Cordinates(100, 100, 100));
+
+            #endregion
 
 
 

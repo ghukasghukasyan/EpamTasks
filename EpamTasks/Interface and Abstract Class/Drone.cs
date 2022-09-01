@@ -7,20 +7,45 @@ namespace EpamTasks.Interface_and_Abstract_Class
     class Drone : IFlyable
     {
         
-        Cordinates currentPosition { get; set; }
+        Cordinates CurrentPosition { get; set; }
+        
         public void FlyTo(Cordinates newPosition)
         {
-            Console.WriteLine("The distance between this to points is");
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - currentPosition.X), 2) + Math.Pow((newPosition.Y - currentPosition.Y), 2) + Math.Pow((newPosition.Z - currentPosition.Z), 2));
+            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            if (distance > 1000)
+            {
+                Console.WriteLine("Airplane couldn't fly more than 1,000km");
+            }
+            else
+            {
+                Console.WriteLine("The distance between this two points is : " + distance);
+            };
 
 
         }
 
         public void GetFlyTime(Cordinates newPosition)
         {
-            
+            //var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            //Console.WriteLine("The distance between this two points is : " + distance);
+            //var flyTime = distance / speed;
+            //Console.WriteLine("The fly time is : " + flyTime);
         }
 
-        
+        public Drone()
+        {
+
+        }
+
+        public Drone(Cordinates currentPosition)
+        {
+            CurrentPosition = currentPosition;
+        }
+
+        public override string ToString()
+        {
+            return $"Bird Cordinates are X = {CurrentPosition.X}, Y = {CurrentPosition.Y}, Z = {CurrentPosition.Z}";
+        }
+
     }
 }
