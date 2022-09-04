@@ -1,6 +1,9 @@
-﻿using EpamTasks.Interface_and_Abstract_Class;
+﻿using EpamTasks.Development_and_build_tools;
+using EpamTasks.Interface_and_Abstract_Class;
 using EpamTasks.OOP;
 using System;
+
+
 
 namespace EpamTasks
 {
@@ -8,6 +11,19 @@ namespace EpamTasks
     {
         static void Main(string[] args)
         {
+
+
+            #region Development and build tools
+
+            MaxCharacter.LongestSubstringWithNoRepeatingCharacters();
+            
+
+            
+
+            #endregion
+
+
+
             #region Basic of.Net framework and C# Task
 
             //Basic.Converters();
@@ -59,23 +75,23 @@ namespace EpamTasks
 
             #region Interface and Abstract Class
 
-            Console.WriteLine("Insert positive number for X cordinate ");
-            int xCord = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Insert positive number for Y cordinate ");
-            int yCord = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Insert positive number for Z cordinate ");
-            int zCord = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Insert positive number for X cordinate ");
+            //int xCord = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Insert positive number for Y cordinate ");
+            //int yCord = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Insert positive number for Z cordinate ");
+            //int zCord = Convert.ToInt32(Console.ReadLine());
 
 
-            //Bird bird = new Bird(new Cordinates(xCord, yCord,zCord));
-            //Console.WriteLine(bird.ToString());
-            //bird.FlyTo(new Cordinates(10, 30, 40));
-            //bird.GetFlyTime(new Cordinates(10, 30, 40));
+            ////Bird bird = new Bird(new Cordinates(xCord, yCord,zCord));
+            ////Console.WriteLine(bird.ToString());
+            ////bird.FlyTo(new Cordinates(10, 30, 40));
+            ////bird.GetFlyTime(new Cordinates(10, 30, 40));
 
-            Airplane airplane = new Airplane(new Cordinates(xCord, yCord, zCord));
-            Console.WriteLine(airplane.ToString());
-            airplane.FlyTo(new Cordinates(100, 100, 100));
-            airplane.GetFlyTime(new Cordinates(100, 100, 100));
+            //Airplane airplane = new Airplane(new Cordinates(xCord, yCord, zCord));
+            //Console.WriteLine(airplane.ToString());
+            //airplane.FlyTo(new Cordinates(100, 100, 100));
+            //airplane.GetFlyTime(new Cordinates(100, 100, 100));
 
             #endregion
 
