@@ -1,7 +1,8 @@
-﻿using EpamTasks.Interface_and_Abstract_Class;
+﻿using EpamTasks.Development_and_build_tools;
+using EpamTasks.Interface_and_Abstract_Class;
 using EpamTasks.OOP;
 using System;
-using EpamTasks.Development_and_build_tools;
+
 
 
 namespace EpamTasks
@@ -10,10 +11,18 @@ namespace EpamTasks
     {
         static void Main(string[] args)
         {
-           
 
-            MaxCharacter.MaxNumberOfUnequalConsecutiveCharacters("Hello");
+
+            #region Development and build tools
+
+            MaxCharacter.LongestSubstringWithNoRepeatingCharacters();
             
+
+            
+
+            #endregion
+
+
 
             #region Basic of.Net framework and C# Task
 
