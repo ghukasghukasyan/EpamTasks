@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EpamTasks.Interface_and_Abstract_Class
+namespace EpamTasks.InterfaceAndAbstractClass
 {
     public class Cordinates
     {
 
-        private int _x;
-        private int _y;
-        private int _z;
+        private int x;
+        private int y;
+        private int z;
 
         public int X
         {
-            get { return _x; }
+            get { return x; }
             set
             {
                 if (value < 0)
@@ -23,7 +23,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 }
                 else
                 {
-                    this._x= value;
+                    this.x= value;
                 }
 
             }
@@ -31,7 +31,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
 
         public int Y
         {
-            get { return _y; }
+            get { return y; }
             set
             {
                 if (value < 0)
@@ -40,14 +40,14 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 }
                 else
                 {
-                    this._y = value;
+                    this.y = value;
                 }
             }
         }
 
         public int Z
         {
-            get { return _z; }
+            get { return z; }
             set
             {
                 if (value < 0)
@@ -56,7 +56,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 }
                 else
                 {
-                    this._z = value;
+                    this.z = value;
                 }
             }
         }
@@ -72,9 +72,10 @@ namespace EpamTasks.Interface_and_Abstract_Class
             Y = y;
             Z = z;
         }
+        
         public override string ToString()
         {
-            return $"X={_x} Y={_y} Z={_z}";
+            return $"X={x} Y={y} Z={z}";
         }
 
 

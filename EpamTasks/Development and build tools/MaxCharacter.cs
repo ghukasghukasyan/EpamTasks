@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EpamTasks.Development_and_build_tools
+namespace EpamTasks.DevelopmentAndBuildTools
 {
-    class MaxCharacter
+    public class MaxCharacter
     {
         public static void LongestSubstringWithNoRepeatingCharacters()
         {
-            Console.WriteLine("Enter a string");
-            string s = Console.ReadLine();
+            Console.WriteLine("Insert a string");
+            string input = Console.ReadLine();
             List<char> c = new List<char>();
-            int iPointer = 0;
-            int jpointer = 0;
+            int i = 0;
+            int j = 0;
             int max = 0;
-            while (jpointer < s.Length)
+            while (j < input.Length)
             {
-                if (c.Contains(s[jpointer]))
+                if (c.Contains(input[j]))
                 {
-                    c.Remove(s[iPointer]);
-                    iPointer++;
+                    c.Remove(input[i]);
+                    i++;
                 }
                 else
                 {
                    
-                    c.Add(s[jpointer]);
-                    jpointer++;
+                    c.Add(input[j]);
+                    j++;
                     max = Math.Max(c.Count(), max);
                 }
             }
-            Console.WriteLine(max);
+            Console.WriteLine($"The maximum number of unequal consecutive characters equal to: "+max);
         }
         
     }

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EpamTasks.Interface_and_Abstract_Class
+namespace EpamTasks.InterfaceAndAbstractClass
 {
-    class Airplane : IFlyable
+    public class Airplane : IFlyable
     {
 
-        private readonly int initialSpeed = 200;
-        Cordinates CurrentPosition { get; set; }
+        private  int initialSpeed = 200;
+        public Cordinates CurrentPosition { get; set; }
 
         
         public void FlyTo(Cordinates newPosition)
@@ -40,6 +40,9 @@ namespace EpamTasks.Interface_and_Abstract_Class
                 Console.WriteLine("The distance between this two points is : " + distance);
 
             };
+
+           
+
             int currentSpeed = initialSpeed + (int)distance / 10;
             var flyTime = distance / currentSpeed;
             Console.WriteLine("The fly time is : " + flyTime);
@@ -53,7 +56,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
 
         public Airplane(Cordinates currentPosition)
         {
-            CurrentPosition = currentPosition;
+            this.CurrentPosition = currentPosition;
         }
         public override string ToString()
         {

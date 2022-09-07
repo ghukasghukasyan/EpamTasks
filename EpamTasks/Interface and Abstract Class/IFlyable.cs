@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EpamTasks.Interface_and_Abstract_Class
+namespace EpamTasks.InterfaceAndAbstractClass
 {
     interface IFlyable
     {

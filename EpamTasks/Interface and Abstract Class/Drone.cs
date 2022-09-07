@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EpamTasks.Interface_and_Abstract_Class
+namespace EpamTasks.InterfaceAndAbstractClass
 {
-    class Drone : IFlyable
+    public class Drone : IFlyable
     {
-        
-        Cordinates CurrentPosition { get; set; }
+        private readonly int speed = 5;
+        public Cordinates CurrentPosition { get; set; }
         
         public void FlyTo(Cordinates newPosition)
         {
@@ -26,10 +26,10 @@ namespace EpamTasks.Interface_and_Abstract_Class
 
         public void GetFlyTime(Cordinates newPosition)
         {
-            //var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
-            //Console.WriteLine("The distance between this two points is : " + distance);
-            //var flyTime = distance / speed;
-            //Console.WriteLine("The fly time is : " + flyTime);
+            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            Console.WriteLine("The distance between this two points is : " + distance);
+            var flyTime = distance / speed;
+            Console.WriteLine("The fly time is : " + flyTime);
         }
 
         public Drone()

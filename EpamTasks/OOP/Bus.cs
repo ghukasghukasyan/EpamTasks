@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EpamTasks.OOP
 {
-    class Bus:BaseCar
+    public class Bus:BaseCar
     {
         public Bus()
         {

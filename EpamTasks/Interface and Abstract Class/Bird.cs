@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EpamTasks.Interface_and_Abstract_Class
+namespace EpamTasks.InterfaceAndAbstractClass
 {
-    class Bird : IFlyable
+    public class Bird : IFlyable
     {
         private readonly int speed = 10;
-        public Cordinates CurrentPosition;
+
+        public Cordinates CurrentPosition { get; set; }
 
 
         public void FlyTo(Cordinates newPosition)
@@ -16,7 +17,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
             var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
             if (distance > 100)
             {
-                Console.WriteLine("Bird couldn't fly more than 100");
+                Console.WriteLine("Bird couldn't fly more than 100 KM");
             }
             else
             {
@@ -29,6 +30,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
 
         public void GetFlyTime(Cordinates newPosition)
         {
+
             var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
             Console.WriteLine("The distance between this two points is : " + distance);
             var flyTime = distance / speed;
@@ -43,7 +45,7 @@ namespace EpamTasks.Interface_and_Abstract_Class
 
         public Bird(Cordinates currentPosition)
         {
-            CurrentPosition = currentPosition;
+            this.CurrentPosition = currentPosition;
         }
 
         public override string ToString()
