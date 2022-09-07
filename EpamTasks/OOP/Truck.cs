@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EpamTasks.OOP
 {
-    class Truck:BaseCar
+    public class Truck:BaseCar
     {
         public Truck()
         {
