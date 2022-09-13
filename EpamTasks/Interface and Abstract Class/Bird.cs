@@ -4,37 +4,36 @@ using System.Text;
 
 namespace EpamTasks.InterfaceAndAbstractClass
 {
-    public class Bird : IFlyable
+    public class Bird : AbstractMovableObject
     {
-        private readonly int speed = 10;
+        private int speed = 15;
 
-        public Cordinates CurrentPosition { get; set; }
+      
 
 
-        public void FlyTo(Cordinates newPosition)
+        public override void FlyTo(Cordinates newPosition)
         {
 
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            double distance = this.Distance(newPosition);
             if (distance > 100)
             {
                 Console.WriteLine("Bird couldn't fly more than 100 KM");
             }
             else
             {
-                Console.WriteLine("The distance between this two points is : " + distance);
+                Console.WriteLine("The distance between this two points is : " + distance +" KM");
             };
 
 
 
         }
 
-        public void GetFlyTime(Cordinates newPosition)
+        public override void GetFlyTime(Cordinates newPosition)
         {
-
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
-            Console.WriteLine("The distance between this two points is : " + distance);
+            double distance = this.Distance(newPosition);
+            Console.WriteLine("The distance between this two points is : " + distance +" KM");
             var flyTime = distance / speed;
-            Console.WriteLine("The fly time is : " + flyTime);
+            Console.WriteLine("The fly time is : " + flyTime+ " hour");
 
         }
 

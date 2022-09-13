@@ -11,23 +11,23 @@ namespace EpamTasks.DevelopmentAndBuildTools
         {
             Console.WriteLine("Insert a string");
             string input = Console.ReadLine();
-            List<char> c = new List<char>();
+            List<char> chars = new List<char>();
             int i = 0;
             int j = 0;
             int max = 0;
             while (j < input.Length)
             {
-                if (c.Contains(input[j]))
+                if (chars.Contains(input[j]))
                 {
-                    c.Remove(input[i]);
+                    chars.Remove(input[i]);
                     i++;
                 }
                 else
                 {
                    
-                    c.Add(input[j]);
+                    chars.Add(input[j]);
                     j++;
-                    max = Math.Max(c.Count(), max);
+                    max = Math.Max(chars.Count(), max);
                 }
             }
             Console.WriteLine($"The maximum number of unequal consecutive characters equal to: "+max);

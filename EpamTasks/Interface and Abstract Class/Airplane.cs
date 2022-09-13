@@ -4,48 +4,58 @@ using System.Text;
 
 namespace EpamTasks.InterfaceAndAbstractClass
 {
-    public class Airplane : IFlyable
+    public class Airplane : AbstractMovableObject
     {
 
         private  int initialSpeed = 200;
-        public Cordinates CurrentPosition { get; set; }
 
-        
-        public void FlyTo(Cordinates newPosition)
+        public override void FlyTo(Cordinates newPosition)
         {
-            
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            double distance = this.Distance(newPosition);
+       
             if (distance > 10000)
             {
                 Console.WriteLine("Airplane couldn't fly more than 10,000km");
             }
             else
             {
-                Console.WriteLine("The distance between this two points is : " + distance);
+                Console.WriteLine($"The distance between this two points is : { distance} KM");
             };
 
 
         }
 
 
-        public void GetFlyTime(Cordinates newPosition)
+        public override void GetFlyTime(Cordinates newPosition)
         {
-            var distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
+            double distance =this.Distance(newPosition);
             if (distance > 10000)
             {
                 Console.WriteLine("Airplane couldn't fly more than 10,000km");
             }
             else
             {
-                Console.WriteLine("The distance between this two points is : " + distance);
+                Console.WriteLine($"The distance between this two points is :  {distance} km");
+                int sections = (int)distance / 10;
+                float flyTime = 0;
+                int adding = 10;
+
+                for (int i = 0; i < sections; i++)
+                {
+
+                    flyTime += 10 / (205f + adding * i);
+
+                }
+                if (distance - (sections * 10) == 0)
+                {
+                    Console.WriteLine($"The flight time is equal to {flyTime} hour");
+                }
+                else
+                {
+                    Console.WriteLine($"The flight time is equal to "+((distance - (sections * 10)) / (205f + (10 * sections))) +" hour");
+                }
 
             };
-
-           
-
-            int currentSpeed = initialSpeed + (int)distance / 10;
-            var flyTime = distance / currentSpeed;
-            Console.WriteLine("The fly time is : " + flyTime);
 
         }
 
@@ -58,6 +68,7 @@ namespace EpamTasks.InterfaceAndAbstractClass
         {
             this.CurrentPosition = currentPosition;
         }
+        
         public override string ToString()
         {
             return $"Airplane Cordinates are X = {CurrentPosition.X}, Y = {CurrentPosition.Y}, Z = {CurrentPosition.Z}";
