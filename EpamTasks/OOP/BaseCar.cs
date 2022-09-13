@@ -25,7 +25,7 @@ namespace EpamTasks.OOP
 
         public override string ToString()
         {
-            return $"Your Car Info! \n"+
+            return $"Your {this.GetType().Name} Car Info! \n"+ 
                    $"Engine | Power = {Engine.Power}  Volume = {Engine.Volume}  Serial Number = {Engine.SerialNumber}  Type = {Engine.Type} \n" +
                    $"Transmission | Manufacturer = {Transmission.Manufacturer}  Number Of Gears = {Transmission.NumberOfGears} Type = {Transmission.Type}\n" +
                    $"Chassis | Number = {Chassis.Number} Permissible Load ={Chassis.PermissibleLoad}  Wheels Number= {Chassis.WheelsNumber}";
