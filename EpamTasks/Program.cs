@@ -31,12 +31,14 @@ namespace EpamTasks
                     break;
 
                 case 2:
+                    
                     Console.WriteLine("Let's see Task #2 Solution \n");
                     Basic.Converters();
                     break;
+
                 case 3:
-                    Console.WriteLine("Let's see Task #3 Solution \n");
                     
+                    Console.WriteLine("Let's see Task #3 Solution \n"); 
                     PassengerCar passengerCar = new PassengerCar()
                     {
                         Engine = new Engine { Power = 123, SerialNumber = "ZHQSA15AQTA153", Type = "V8", Volume = 1000 },
@@ -140,70 +142,60 @@ namespace EpamTasks
 
 
 
-                    //var query = arr.Where(arr => arr.Engine.Power > 1.5).ToList();
+                    var query = arr.Where(arr => arr.Engine.Power > 1.5).ToList();
                     //var query = from arrs in arr
                     //            where arrs.Engine.Power > 1.5
                     //            select arrs;
 
-                    //XElement aer = new XElement("car");
+                    XElement aer = new XElement("car");
 
 
-                    //foreach (var i in query)
-                    //{
-                    //    aer.Add(new XElement(i.GetType().Name,
-                    //       new XElement("enginePower", i.Engine.Power),
-                    //       new XElement("engineSerialNumber", i.Engine.SerialNumber),
-                    //       new XElement("engineType", i.Engine.Type),
-                    //       new XElement("enginePower", i.Engine.Power),
-                    //       new XElement("transmissionManufacturer", i.Transmission.Manufacturer),
-                    //       new XElement("transmissionNumberOfGears", i.Transmission.NumberOfGears),
-                    //       new XElement("transmissionType", i.Transmission.Type),
-                    //       new XElement("chassisNumber", i.Chassis.Number),
-                    //       new XElement("chassisPermissibleLoad", i.Chassis.PermissibleLoad),
-                    //       new XElement("chassisWheelsNumber", i.Chassis.WheelsNumber)
+                    foreach (var i in query)
+                    {
+                        aer.Add(new XElement(i.GetType().Name,
+                           new XElement("enginePower", i.Engine.Power),
+                           new XElement("engineSerialNumber", i.Engine.SerialNumber),
+                           new XElement("engineType", i.Engine.Type),
+                           new XElement("enginePower", i.Engine.Power),
+                           new XElement("transmissionManufacturer", i.Transmission.Manufacturer),
+                           new XElement("transmissionNumberOfGears", i.Transmission.NumberOfGears),
+                           new XElement("transmissionType", i.Transmission.Type),
+                           new XElement("chassisNumber", i.Chassis.Number),
+                           new XElement("chassisPermissibleLoad", i.Chassis.PermissibleLoad),
+                           new XElement("chassisWheelsNumber", i.Chassis.WheelsNumber)
 
-                    //       ));
+                           ));
 
-                    //}
+                    }
 
-                    //XDocument srcTreee = new XDocument(new XElement("carInfo", aer));
-                    //aer.Save("task5.xml");
-                    //Console.WriteLine(srcTreee);
+                    aer.Save("task5.1.xml");
+                    Console.WriteLine(aer);
 
 
-                    //var query1 = arr.Where(arr => arr.GetType() == typeof(Truck) || arr.GetType() == typeof(Bus)).ToList();
+                    var query1 = arr.Where(arr => arr.GetType() == typeof(Truck) || arr.GetType() == typeof(Bus)).ToList();
                     //var query1 = from arrs in arr
                     //             where arrs.GetType() == typeof(Truck) || arrs.GetType() == typeof(Bus)
                     //             select arrs;
 
-                    //XElement car = new XElement("Car");
-                    //foreach (var i in query1)
-                    //{
-                    //    car.Add(new XElement(i.GetType().Name,
-                    //        new XElement("engineType", i.Engine.Type),
-                    //       new XElement("serialNumber", i.Engine.SerialNumber),
-                    //       new XElement("enginePower", i.Engine.Power)));
+                    XElement car = new XElement("Car");
+                    foreach (var i in query1)
+                    {
+                        car.Add(new XElement(i.GetType().Name,
+                            new XElement("engineType", i.Engine.Type),
+                           new XElement("serialNumber", i.Engine.SerialNumber),
+                           new XElement("enginePower", i.Engine.Power)));
 
-                    //}
+                    }
 
-                    //XDocument srcTreee = new XDocument(new XElement("Cars", car));
-                    //srcTreee.Save("task5.xml");
-                    //Console.WriteLine(srcTreee);
-
-
-
+                   
+                    car.Save("task5.2.xml");
+                    Console.WriteLine(car);
 
                     var query2 = arr.GroupBy(a => a.Transmission.Type).ToList();
                     //var query2 = from arrs in arr
                     //.GroupBy(arr => arr.Transmission.Type)
                     //select arrs;
 
-
-
-
-
-
-                   
 
                     XElement b = new XElement("Cars");
 
@@ -233,13 +225,8 @@ namespace EpamTasks
                         b.Add(k);
                     }
 
-                    XDocument srcTreee = new XDocument(new XElement("Info", b));
-                    srcTreee.Save("task5.xml");
-                    Console.WriteLine(srcTreee);
-
-
-
-
+                    b.Save("task5.3.xml");
+                    Console.WriteLine(b);
                     break;
             }
 
