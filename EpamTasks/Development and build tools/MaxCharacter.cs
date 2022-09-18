@@ -5,6 +5,10 @@ using System.Text;
 
 namespace EpamTasks.DevelopmentAndBuildTools
 {
+    /// <summary> 
+    /// The MaxCharacter class provides method LongestSubstringWithNoRepeatingCharacters() 
+    /// that prints the maximum number of unequal consecutive characters per line to the console
+    /// </summary>
     public class MaxCharacter
     {
         public static void LongestSubstringWithNoRepeatingCharacters()

@@ -4,6 +4,10 @@ using System.Text;
 
 namespace EpamTasks
 {
+    /// <summary> 
+    /// The Basic class provides method Converters() that converts
+    /// number in decimal to inputed 2-20 number system
+    /// </summary>
     public class Basic
     {
         public static void Converters()
