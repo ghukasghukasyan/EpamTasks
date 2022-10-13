@@ -9,7 +9,7 @@ namespace EpamTasks.InterfaceAndAbstractClass
         public override void FlyTo(Cordinates newPosition)
         {
             double distance = this.Distance(newPosition);
-
+           
             if (distance > 10000)
             {
                 Console.WriteLine("Airplane couldn't fly more than 10,000km");
@@ -36,7 +36,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
 
                 for (int i = 0; i < sections; i++)
                 {
-
                     flyTime += 10 / (205f + adding * i);
                 }
                 
@@ -51,10 +50,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
             };
         }
 
-        public Airplane()
-        {
-        }
-
         public Airplane(Cordinates currentPosition)
         {
             this.CurrentPosition = currentPosition;
@@ -64,7 +59,5 @@ namespace EpamTasks.InterfaceAndAbstractClass
         {
             return $"Airplane Cordinates are X = {CurrentPosition.X}, Y = {CurrentPosition.Y}, Z = {CurrentPosition.Z}";
         }
-
-
     }
 }

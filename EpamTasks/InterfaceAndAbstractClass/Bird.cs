@@ -8,7 +8,7 @@ namespace EpamTasks.InterfaceAndAbstractClass
     {
         Random rnd = new Random();
         private int speed;
-
+       
         public override void FlyTo(Cordinates newPosition)
         {
             double distance = this.Distance(newPosition);
@@ -29,12 +29,7 @@ namespace EpamTasks.InterfaceAndAbstractClass
             speed = rnd.Next(1, 20);
             var flyTime = distance / speed;
             Console.WriteLine($"The speed of bird equal to: {speed}");
-
             Console.WriteLine("The fly time is : " + flyTime+ " hour");
-        }
-
-        public Bird()
-        {
         }
 
         public Bird(Cordinates currentPosition)

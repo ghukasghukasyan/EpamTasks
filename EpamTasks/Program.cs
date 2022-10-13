@@ -27,7 +27,7 @@ namespace EpamTasks
                     Console.WriteLine("Let's see Task #1 Solution \n");
                     MaxCharacter.LongestSubstringWithNoRepeatingCharacters();
                     break;
-
+                
                 case 2:
                     Console.WriteLine("Let's see Task #2 Solution \n");
                     Basic.Converters();
