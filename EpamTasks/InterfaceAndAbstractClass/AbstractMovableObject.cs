@@ -8,7 +8,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
     {
         public abstract void FlyTo(Cordinates newPoint);
         public abstract void GetFlyTime(Cordinates newPoint);
-
         public Cordinates CurrentPosition { get; set; }
 
         public double Distance(Cordinates newPosition)
@@ -17,7 +16,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
             return distance;
 
         }
-
     }
 }
 

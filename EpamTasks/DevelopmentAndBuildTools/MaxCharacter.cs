@@ -19,6 +19,7 @@ namespace EpamTasks.DevelopmentAndBuildTools
             int i = 0;
             int j = 0;
             int max = 0;
+           
             while (j < input.Length)
             {
                 if (chars.Contains(input[j]))
@@ -27,15 +28,13 @@ namespace EpamTasks.DevelopmentAndBuildTools
                     i++;
                 }
                 else
-                {
-                   
+                {                  
                     chars.Add(input[j]);
                     j++;
                     max = Math.Max(chars.Count(), max);
                 }
             }
             Console.WriteLine($"The maximum number of unequal consecutive characters equal to: "+max);
-        }
-        
+        } 
     }
 }
