@@ -14,9 +14,7 @@ namespace EpamTasks
         {
             Console.WriteLine("Insert an integer for converting");         
             int number = Convert.ToInt32(Console.ReadLine());
-            
             int input = number;
-            
             Console.WriteLine("Insert a base number 2-20");
             int numberSystem = Convert.ToInt32(Console.ReadLine());
 
@@ -38,7 +36,6 @@ namespace EpamTasks
             {
                 Console.Write(str[i]);
             }
-
         }
     }
 }

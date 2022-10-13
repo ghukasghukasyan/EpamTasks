@@ -13,7 +13,6 @@ namespace EpamTasks
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine($"Enter Number for Task Review \n" +
                 $"1 - LongestSubstringWithNoRepeatingCharacters \n" +
                 $"2 - Converters\n" +
@@ -22,7 +21,6 @@ namespace EpamTasks
                 $"5 - Collections \n" );
             int input = Convert.ToInt32(Console.ReadLine());
 
-            
             switch (input)
             { 
                 case 1:
@@ -31,15 +29,13 @@ namespace EpamTasks
                     break;
 
                 case 2:
-                    
                     Console.WriteLine("Let's see Task #2 Solution \n");
                     Basic.Converters();
                     break;
 
-                case 3:
-                    
+                case 3: 
                     Console.WriteLine("Let's see Task #3 Solution \n"); 
-                    PassengerCar passengerCar = new PassengerCar()
+                    PassengerCar passengerCar = new PassengerCar("Cabriolet")
                     {
                         Engine = new Engine { Power = 123, SerialNumber = "ZHQSA15AQTA153", Type = "V8", Volume = 1000 },
                         Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 6, Type = "Automatic" },
@@ -50,7 +46,7 @@ namespace EpamTasks
                     Console.WriteLine(passengerCar.ToString() + "\n");
 
 
-                    Truck truck = new Truck()
+                    Truck truck = new Truck("Full size")
                     {
                         Engine = new Engine { Power = 400, SerialNumber = "ERTHE154DHSA153", Type = "V12", Volume = 5000 },
                         Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 15, Type = "Automatic" },
@@ -60,7 +56,7 @@ namespace EpamTasks
                     Console.WriteLine(truck.ToString() + "\n");
 
 
-                    Bus bus = new Bus()
+                    Bus bus = new Bus("School")
                     {
                         Engine = new Engine { Power = 300, SerialNumber = "KDARTHE154DHSA153", Type = "V6", Volume = 5000 },
                         Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 7, Type = "Mechanical" },
@@ -70,7 +66,7 @@ namespace EpamTasks
                     Console.WriteLine(bus.ToString() + "\n");
 
 
-                    Scooter scooter = new Scooter()
+                    Scooter scooter = new Scooter("Hand brake")
                     {
                         Engine = new Engine { Power = 100, SerialNumber = "IEYSTH1547SYAH", Type = "V6", Volume = 1000 },
                         Transmission = new Transmission { Manufacturer = "Seado", NumberOfGears = 5, Type = "Automatic" },
@@ -81,7 +77,6 @@ namespace EpamTasks
 
                 case 4:
                     Console.WriteLine("Let's see Task #4 Solution \n");
-
                     Console.WriteLine("Insert positive number for X cordinate ");
                     int xCord = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Insert positive number for Y cordinate ");
@@ -103,51 +98,51 @@ namespace EpamTasks
 
                 case 5:
                     Console.WriteLine("Let's see Task #5 Solution \n");
-                    List<BaseCar> arr = new List<BaseCar>();
+                    List<Vehicle> arr = new List<Vehicle>();
 
                     arr.Add(
-                        new PassengerCar
+                        new PassengerCar("Cabriolet")
                         {
-                            Engine = new Engine { Power = 123, SerialNumber = "ZHQSA15AQTA153", Type = "V8", Volume = 1000 },
+                            Engine = new Engine { Power = 123, SerialNumber = "ZHQSA15AQTA153", Type = "V8", Volume = 2.5 },
                             Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 6, Type = "Automatic" },
                             Chassis = new Chassis { Number = 5, PermissibleLoad = 3000, WheelsNumber = 4 },
                         });
 
 
                     arr.Add(
-                        new Truck
+                        new Truck("Full size")
                         {
-                            Engine = new Engine { Power = 400, SerialNumber = "ERTHE154DHSA153", Type = "V12", Volume = 5000 },
+                            Engine = new Engine { Power = 400, SerialNumber = "ERTHE154DHSA153", Type = "V12", Volume = 6.2 },
                             Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 15, Type = "Automatic" },
                             Chassis = new Chassis { Number = 10, PermissibleLoad = 23000, WheelsNumber = 10 }
                         });
 
 
                     arr.Add(
-                        new Bus
+                        new Bus("Schoo;")
                         {
-                            Engine = new Engine { Power = 300, SerialNumber = "KDARTHE154DHSA153", Type = "V6", Volume = 5000 },
+                            Engine = new Engine { Power = 300, SerialNumber = "KDARTHE154DHSA153", Type = "V6", Volume = 4.7 },
                             Transmission = new Transmission { Manufacturer = "ZF", NumberOfGears = 7, Type = "Mechanical" },
                             Chassis = new Chassis { Number = 8, PermissibleLoad = 15000, WheelsNumber = 6 }
                         });
 
 
                     arr.Add(
-                        new Scooter
+                        new Scooter("Hand brake")
                         {
-                            Engine = new Engine { Power = 100, SerialNumber = "IEYSTH1547SYAH", Type = "V6", Volume = 1000 },
+                            Engine = new Engine { Power = 100, SerialNumber = "IEYSTH1547SYAH", Type = "V6", Volume = 0.6 },
                             Transmission = new Transmission { Manufacturer = "Seado", NumberOfGears = 5, Type = "Automatic" },
                             Chassis = new Chassis { Number = 4, PermissibleLoad = 500, WheelsNumber = 0 }
                         });
 
 
 
-                    var query = arr.Where(arr => arr.Engine.Power > 1.5).ToList();
+                    var query = arr.Where(arr => arr.Engine.Volume > 1.5).ToList();
                     //var query = from arrs in arr
                     //            where arrs.Engine.Power > 1.5
                     //            select arrs;
 
-                    XElement aer = new XElement("car");
+                    XElement aer = new XElement("AllInformationAboutAllVehiclesAnEngineCapacityOfWhichIsMoreThan1.5Liters");
 
 
                     foreach (var i in query)
@@ -177,7 +172,7 @@ namespace EpamTasks
                     //             where arrs.GetType() == typeof(Truck) || arrs.GetType() == typeof(Bus)
                     //             select arrs;
 
-                    XElement car = new XElement("Car");
+                    XElement car = new XElement("EngineTypeSerialNumberAndPowerRatingForAllBusesAndTrucks");
                     foreach (var i in query1)
                     {
                         car.Add(new XElement(i.GetType().Name,
@@ -197,7 +192,7 @@ namespace EpamTasks
                     //select arrs;
 
 
-                    XElement b = new XElement("Cars");
+                    XElement b = new XElement("AllInformationAboutAllVehiclesGroupedByTransmissionType");
 
                     foreach (var transmission in query2)
                     {
@@ -229,34 +224,6 @@ namespace EpamTasks
                     Console.WriteLine(b);
                     break;
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
     }
 }

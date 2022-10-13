@@ -7,7 +7,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
     public class Drone : AbstractMovableObject
     {
         private int speed = 5;
-       
 
         public override void FlyTo(Cordinates newPosition)
         {
@@ -20,7 +19,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
             {
                 Console.WriteLine("The distance between this two points is : " + distance);
             };
-
         }
 
         public override void GetFlyTime(Cordinates newPosition)
@@ -33,7 +31,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
 
         public Drone()
         {
-
         }
 
         public Drone(Cordinates currentPosition)
@@ -45,6 +42,5 @@ namespace EpamTasks.InterfaceAndAbstractClass
         {
             return $"Bird Cordinates are X = {CurrentPosition.X}, Y = {CurrentPosition.Y}, Z = {CurrentPosition.Z}";
         }
-
     }
 }

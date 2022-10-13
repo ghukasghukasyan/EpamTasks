@@ -6,13 +6,10 @@ namespace EpamTasks.InterfaceAndAbstractClass
 {
     public class Airplane : AbstractMovableObject
     {
-
-        private  int initialSpeed = 200;
-
         public override void FlyTo(Cordinates newPosition)
         {
             double distance = this.Distance(newPosition);
-       
+
             if (distance > 10000)
             {
                 Console.WriteLine("Airplane couldn't fly more than 10,000km");
@@ -21,10 +18,7 @@ namespace EpamTasks.InterfaceAndAbstractClass
             {
                 Console.WriteLine($"The distance between this two points is : { distance} KM");
             };
-
-
         }
-
 
         public override void GetFlyTime(Cordinates newPosition)
         {
@@ -44,8 +38,8 @@ namespace EpamTasks.InterfaceAndAbstractClass
                 {
 
                     flyTime += 10 / (205f + adding * i);
-
                 }
+                
                 if (distance - (sections * 10) == 0)
                 {
                     Console.WriteLine($"The flight time is equal to {flyTime} hour");
@@ -54,14 +48,11 @@ namespace EpamTasks.InterfaceAndAbstractClass
                 {
                     Console.WriteLine($"The flight time is equal to "+((distance - (sections * 10)) / (205f + (10 * sections))) +" hour");
                 }
-
             };
-
         }
 
         public Airplane()
         {
-
         }
 
         public Airplane(Cordinates currentPosition)
