@@ -14,7 +14,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
         {
             double distance = Math.Sqrt(Math.Pow((newPosition.X - CurrentPosition.X), 2) + Math.Pow((newPosition.Y - CurrentPosition.Y), 2) + Math.Pow((newPosition.Z - CurrentPosition.Z), 2));
             return distance;
-
         }
     }
 }

@@ -15,12 +15,6 @@ namespace EpamTasks.OOP
         {
         }
 
-        public Vehicle(Engine engine, Transmission transmission, Chassis chassis)
-        {
-            Engine = engine;
-            Transmission = transmission;
-            Chassis = chassis;
-        }
 
         public override string ToString()
         {

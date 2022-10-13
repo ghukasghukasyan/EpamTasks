@@ -44,7 +44,5 @@ namespace EpamTasks.InterfaceAndAbstractClass
         {
             return $"X={X} Y={Y} Z={X}";
         }
-
-
     }
 }

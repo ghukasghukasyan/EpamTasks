@@ -29,10 +29,6 @@ namespace EpamTasks.InterfaceAndAbstractClass
             Console.WriteLine("The fly time is : " + flyTime);
         }
 
-        public Drone()
-        {
-        }
-
         public Drone(Cordinates currentPosition)
         {
             CurrentPosition = currentPosition;

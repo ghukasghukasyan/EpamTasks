@@ -3,13 +3,9 @@ using System;
 
 namespace EpamTasks
 {
-
-
     public class Chassis
     {
-        private int wheelsNumber;
-
-        
+        private int wheelsNumber;  
         public int Number { get; set; }
         public int PermissibleLoad { get; set; }
 

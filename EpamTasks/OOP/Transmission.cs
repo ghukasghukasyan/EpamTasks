@@ -8,7 +8,6 @@ namespace EpamTasks
     public class Transmission
     {
         private int numberOfGears;
-
         public string Type { get; set; }
         public string Manufacturer { get; set; }
 
@@ -17,7 +16,7 @@ namespace EpamTasks
             get
 
             { return numberOfGears; }
-
+            
             set
             {
                 if (value < 0)
